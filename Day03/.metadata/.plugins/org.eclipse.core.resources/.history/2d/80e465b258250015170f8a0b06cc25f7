@@ -1,0 +1,28 @@
+package Demo02;
+
+public class animal {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+}
+	public abstract class animal{
+		public abstract void sleep();
+		
+	}
+	class tiger extends animal{
+	public void sleep(){
+		System.out.println("Å¿×ÅË¯");
+	   }
+	}
+
+	class monkey extends animal{
+		public void sleep(){
+			System.out.println("Ñö×ÅË¯");	
+		}
+	}
+	

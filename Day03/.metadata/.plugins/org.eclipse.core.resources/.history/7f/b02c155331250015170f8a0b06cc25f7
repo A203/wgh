@@ -1,0 +1,21 @@
+package Demo01;
+
+public class Demo01 {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Person p=new Person();
+
+	}
+
+}
+class Person{
+	Person(){
+		 System.out.println(1);}
+	{
+		System.out.println(2);
+	}
+}

@@ -1,0 +1,13 @@
+package 类的加载和对象实例化;
+
+public class demo07 {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

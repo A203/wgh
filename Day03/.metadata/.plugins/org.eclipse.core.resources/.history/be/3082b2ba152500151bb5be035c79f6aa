@@ -1,0 +1,27 @@
+package Phone;
+
+public class phone {
+	string name;
+	string brand;
+	int price;
+	void call(){
+		system.out.println("打电话");
+	}
+	void sendMsg()
+	{
+		system.out.println("发短信");
+	}
+}
+	
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+	phone p=new phone();
+		
+
+	}
+
+}
