@@ -1,0 +1,59 @@
+strings.xml
+
+<?xml version="1.0" encoding="utf-8"?>                             
+<resources>                                                        
+    <string name="app_name">BMI身高体重指数计算器</string>                  
+</resources>                                                       
+
+meum_bmi.xml
+
+
+
+activity_bmi.xml
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    >
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="请输入您的身高：单位（米）"
+        android:textColor="#00000F"
+        android:textSize="20dp"
+        />
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/height"
+        />
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="请输入您的体重：单位（千克）"
+        android:textColor="#00000F"
+        android:textSize="20dp"
+        />
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/weight"
+        android:inputType="number"
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="BMI计算"
+        android:textColor="#FF000F"
+        android:id="@+id/BMIbutton"
+        />
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/show"
+        android:textColor="#0000F0"
+        android:textSize="30dp"
+
+        />
+</LinearLayout>
