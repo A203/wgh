@@ -1,0 +1,12 @@
+<resources>
+    <string name="mobile_address">Mobile Address</string>
+    <string name="textView">Search</string>
+    <string name="editText">输入框</string>
+    <string name="not_editable">文本框</string>
+    <string name="display">显示框</string>
+    <string name="btn">按钮</string>
+    <string name="display_bth_clicked">请按按钮</string>
+    <string name="btn_checked">开</string>
+    <string name="btn_unchecked">关</string>
+
+</resources>

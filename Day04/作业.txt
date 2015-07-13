@@ -1,0 +1,204 @@
+Java:
+package com.ljh.mixviewdemo;
+
+
+import android.os.Bundle;
+
+import android.app.Activity;
+
+import android.view.View;
+import android.view.View.OnClickListener;
+
+import android.widget.ImageView;
+
+import android.widget.LinearLayout;
+
+
+public class MainActivity extends Activity {
+	
+	
+//若这两个变量放到方法里面，则要求是final的。
+	
+int currentImage = 0;
+	
+int[] images = new int[]
+{R.drawable.ajax, R.drawable.classic, R.drawable.ee, R.drawable.java, R.drawable.xml};
+
+	
+@Override
+	
+protected void onCreate(Bundle savedInstanceState) {
+	
+	super.onCreate(savedInstanceState);
+		
+setContentView(R.layout.activity_main);
+		
+		
+//根据 id得到layout，注意要为layout添加一个id，而不是使用R.layout.activity_main作为 id来查找。
+		
+LinearLayout layout = (LinearLayout) this.findViewById(R.id.root);
+		
+		
+//定义一个ImageView，并将之添加至layout中。
+		
+final ImageView iv = new ImageView(this);				
+		
+layout.addView(iv);
+		
+		
+//指定所要显示的图片
+		
+iv.setImageResource(images[0]);
+		
+	
+//setOnClickListener是View的方法，亦即所有的view都可点击的。
+	
+	iv.setOnClickListener(new OnClickListener(){
+			
+public void onClick(View v){
+				
+iv.setImageResource(images[++currentImage%images.length]);
+	
+	}
+		
+});
+	
+}
+}
+
+
+Xml:
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    
+xmlns:tools="http://schemas.android.com/tools"
+    
+android:id="@+id/root"
+    
+android:layout_width="match_parent"
+   
+ android:layout_height="match_parent"
+  
+  android:paddingBottom="@dimen/activity_vertical_margin"
+   
+ android:paddingLeft="@dimen/activity_horizontal_margin"
+   
+ android:paddingRight="@dimen/activity_horizontal_margin"
+  
+  android:paddingTop="@dimen/activity_vertical_margin"
+    
+tools:context=".MainActivity"
+    
+android:orientation="vertical" >
+
+</LinearLayout>
+
+
+
+修改后
+Java:
+package com.ljh.mixviewdemo;
+
+
+import android.os.Bundle;
+import android.app.Activity;
+
+import android.view.View;
+import android.view.View.OnClickListener;
+
+import android.widget.ImageView;
+
+import android.widget.LinearLayout;
+
+
+public class MainActivity extends Activity {
+	
+
+//若这两个变量放到方法里面，则要求是final的。
+	
+int currentImage = 0;
+	int[] images = new int[]
+{R.drawable.ajax, R.drawable.classic, R.drawable.ee, R.drawable.java, R.drawable.xml};
+
+	
+@Override
+	
+protected void onCreate(Bundle savedInstanceState) {
+	
+   super.onCreate(savedInstanceState);
+	
+   setContentView(R.layout.activity_main);
+		
+	
+//根据 id得到layout，注意要为layout添加一个id，而不是使用R.layout.activity_main作为 id来查找。
+
+   LinearLayout layout = (LinearLayout) this.findViewById(R.id.root);
+		
+
+/*定义一个ImageView，并将之添加至layout中。
+		
+final ImageView iv = new ImageView(this);	
+	
+  layout.addView(iv);*/
+		
+//不再需要新建一个ImageView，而是获取xml中的IamgeView
+		
+final ImageView iv = (ImageView) this.findViewById(R.id.iv_books);
+		
+		
+//指定所要显示的图片
+		
+iv.setImageResource(images[0]);
+		
+		
+//setOnClickListener是View的方法，亦即所有的view都可点击的。
+		
+iv.setOnClickListener(new OnClickListener(){
+			
+public void onClick(View v){
+				
+iv.setImageResource(images[++currentImage%images.length]);
+			
+   }
+		
+ });
+	
+}
+}
+
+Xml:
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+   
+ xmlns:tools="http://schemas.android.com/tools"
+   
+ android:id="@+id/root"
+   
+ android:layout_width="match_parent"
+    
+android:layout_height="match_parent"
+    
+android:paddingBottom="@dimen/activity_vertical_margin"
+    
+android:paddingLeft="@dimen/activity_horizontal_margin"
+    
+android:paddingRight="@dimen/activity_horizontal_margin"
+    
+android:paddingTop="@dimen/activity_vertical_margin"
+    
+tools:context=".MainActivity"
+    android:orientation="vertical" >
+    
+    
+<ImageView 
+        
+android:id="@+id/iv_books"
+        
+android:layout_width="wrap_content"
+        
+android:layout_height="wrap_content"
+        
+android:contentDescription="@string/my_published_book"
+       
+ />
+
+</LinearLayout>
