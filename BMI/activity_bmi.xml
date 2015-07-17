@@ -1,0 +1,75 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@mipmap/dd"
+
+    >
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="BMI身高体重指数计算器"
+        android:textColor="#facfaa"
+        android:textSize="25sp"
+        android:textStyle="italic"
+        android:gravity="center"
+        />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="请输入您的身高：单位（米）"
+        android:textColor="#facfaa"
+        android:textSize="20sp"
+        android:textStyle="italic"
+        />
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/height"
+        />
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="请输入您的体重：单位（千克）"
+        android:textColor="#facfaa"
+        android:textSize="20sp"
+        android:textStyle="italic"
+        />
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/weight"
+        android:inputType="number"
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="BMI计算"
+        android:textColor="#FF000F"
+        android:id="@+id/BMIbutton"
+        android:background="#facfaa"
+        android:layout_gravity="left"
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="BMI的范围"
+        android:textColor="#FF000F"
+        android:id="@+id/button"
+        android:background="#facfaa"
+        android:layout_gravity="right"
+        />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/show"
+        android:textColor="#facfaa"
+        android:textSize="25sp"
+        android:textStyle="italic"
+
+
+        />
+</LinearLayout>
+
